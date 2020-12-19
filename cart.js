@@ -14,9 +14,19 @@ const cartTotal = (cart) => {
 
     }
 
-    return total
+    return parseFloat(total.toFixed(2))
+}
+
+const addProduct = (cart, product, qty) => {
+    cart.push({...product, qty});
+}
+
+const removeProduct = (cart, productToRemove) => {
+    return cart.filter((product) => {return product.id != productToRemove.id})
 }
 
 module.exports = {
-    cartTotal
+    cartTotal,
+    addProduct,
+    removeProduct
 }
