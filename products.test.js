@@ -14,6 +14,7 @@ describe('Product', () => {
     });
 })
 
+
 describe('Cart', () => {
     test('Cart Total', () => {
         expect(cartTotal(CART)).toBe(331.97);

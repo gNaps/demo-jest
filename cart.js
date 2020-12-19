@@ -8,7 +8,7 @@ const { productPrice } = require('./products')
 const cartTotal = (cart) => {
     let total = 0
 
-    try{
+    try{ 
         total = cart.reduce((acc, value) => acc + (productPrice(value) * value.qty), 0)
     } catch (err) {
 
